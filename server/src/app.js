@@ -13,12 +13,12 @@ const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 
 const app = express();
 
+// Middleware
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
 
 const allowedOrigin = process.env.CLIENT_ORIGIN || 'http://localhost:5173';
-
 app.use(
   cors({
     origin: allowedOrigin,
@@ -31,7 +31,7 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Backend is running' });
 });
 
-// ROUTES (all here)
+// ROUTES
 app.use('/api/auth', authRoutes);
 app.use('/api/resume', resumeRoutes);
 app.use('/api/rag', ragRoutes);

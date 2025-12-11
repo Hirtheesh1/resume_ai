@@ -7,5 +7,5 @@ const { interviewAssist } = require('../controllers/ragController');
 
 // POST /api/rag/query
 router.post('/query', protect, interviewAssist);
-
+ 
 module.exports = router;
