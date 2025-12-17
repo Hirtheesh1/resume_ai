@@ -38,7 +38,6 @@ app.use('/api/rag', ragRoutes);
 app.use('/api/test', testRoutes);
 app.use('/api/debug', debugHF);
 app.use('/api/interview', interviewRoutes);
-
 // ERROR HANDLERS
 app.use(notFound);
 app.use(errorHandler);
