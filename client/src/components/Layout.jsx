@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
               <Link to="/dashboard" className="nav-link">Dashboard</Link>
               <Link to="/upload" className="nav-link">Upload Resume</Link>
               <Link to="/interview" className="nav-link">Interview</Link>
-              <Link to="/rag" className="nav-link">RAG Query</Link>
+              <Link to="/rag" className="nav-link">RAG Queries</Link>
               <div className="nav-user">
                 <span>{user?.name}</span>
                 <button onClick={handleLogout} className="logout-btn">
